@@ -1,16 +1,13 @@
 # Coding Assignment
-- 本リポジトリはMI-6のコーディング課題として作成されました。
-- 「Habit Reminder」を動かすために必要なコードが含まれています。
-- 「Habit Reminder」ではあらかじめ習慣化したいことをリストアップしておくと、ランダムにSlackに通知を送れます。
-- 本リポジトリのコードはプログラミング初心者が書きました。
-  
-https://github.com/mi-6/coding-assignment/assets/23290090/ac1c7a6e-690f-40d7-99f2-00bfce0fc708
 
+- Contains the code necessary to run "Habit Reminder".
+- "Habit Reminder" allows you to make a list of things you want to make into habits in advance, and then send random notifications to Slack.
+- The code in this repository was written by a programming beginner.
 
+## Configuration of ENV
 
-## 環境構築
+### Backend
 
-### バックエンド
 ```
 $ cd backend
 $ docker-compose build
@@ -19,15 +16,16 @@ $ docker-compose exec web bundle exec rails db:create
 $ docker-compose exec web bundle exec rails db:migrate
 ```
 
-### フロントエンド
+### Frontend
+
 ```
 $ cd frontend
 $ yarn install
 $ yarn start
 ```
 
-### Slack通知
+### Slack Notification
+
 ```
 docker-compose exec web bundle exec rake slack:notify
 ```
-※今回の課題の対象外ですので動作しません。
